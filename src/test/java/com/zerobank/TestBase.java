@@ -3,7 +3,6 @@ package com.zerobank;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -22,9 +21,9 @@ public class TestBase {
         driver.get(url);
     }
 
-    @AfterClass
+    @AfterMethod
     public void teardown() throws InterruptedException {
         Thread.sleep(1000);
-        driver.quit();
+        Driver.closeDriver();
     }
 }
