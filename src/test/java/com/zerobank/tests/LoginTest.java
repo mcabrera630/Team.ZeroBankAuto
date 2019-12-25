@@ -3,17 +3,12 @@ package com.zerobank.tests;
 import com.zerobank.TestBase;
 import com.zerobank.pages.LoginPage;
 import com.zerobank.utilities.ConfigurationReader;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.sql.SQLOutput;
-
-import static org.openqa.selenium.By.*;
 
 public class LoginTest extends TestBase {
 
