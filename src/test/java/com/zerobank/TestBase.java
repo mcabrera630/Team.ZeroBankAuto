@@ -19,9 +19,9 @@ public class TestBase {
 
     }
 
-//    @AfterClass
-//    public void teardown() throws InterruptedException {
-//        Thread.sleep(1000);
-//        driver.quit();
-//    }
+    @AfterClass
+    public void teardown() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.quit();
+    }
 }
