@@ -1,7 +1,7 @@
 package com.zerobank.tests;
 
 import com.zerobank.TestBase;
-import com.zerobank.pages.LoginPage;
+import com.zerobank.pages.loginPage;
 import com.zerobank.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,31 +10,26 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class LoginTest extends TestBase {
+public class loginTest extends TestBase {
 
     @Test
     public void PasswordTest()throws InterruptedException{
-        String url = ConfigurationReader.get("url");
-        driver.get(url);
-        LoginPage loginPage = new LoginPage();
+
+        loginPage loginPage = new loginPage();
         loginPage.email.sendKeys("posmanager70@info.com");
         loginPage.password.sendKeys("posmanager");
-        Thread.sleep(1000);
         loginPage.loginBtn.click();
-//        Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver,10);
         WebElement element = wait.until(ExpectedConditions.visibilityOf(loginPage.title));
         String actualTitle = driver.getTitle();
         String expectedTitle = "#Inbox - Odoo";
-
         Assert.assertEquals(actualTitle,expectedTitle);
     }
 
     @Test
     public void wrongUsers()throws InterruptedException{
-        String url = ConfigurationReader.get("url");
-        driver.get(url);
-        LoginPage loginPage = new LoginPage();
+
+        loginPage loginPage = new loginPage();
         loginPage.email.sendKeys("mcabrera30@info.com");
         loginPage.password.sendKeys("sexybeast");
         Thread.sleep(1000);

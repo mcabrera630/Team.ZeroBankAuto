@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class loginPage {
     //Page Object Model vs Page Factory
     /*
     POM design patter in selenium, organization of packages in a certain way
@@ -20,7 +20,7 @@ public class LoginPage {
     -keeps test logics and locators seperate
     -
      */
-    public LoginPage() {
+    public loginPage() {
 //        we need this next line in evey single page object model,(first
 //        parameter is WebDriver object, second is instance of this object.)
 
@@ -43,6 +43,9 @@ public class LoginPage {
 
     @FindBy (xpath = "//p[.]")
     public WebElement errorMessageLogin;
+
+
+
 
 
 
