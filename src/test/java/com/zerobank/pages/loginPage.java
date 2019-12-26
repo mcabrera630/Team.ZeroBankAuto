@@ -46,7 +46,9 @@ public class loginPage {
 
 
 public void login(String emailStr, String passwordstr){
-    email.sendKeys();
+    email.sendKeys(emailStr);
+    password.sendKeys(passwordstr);
+    loginBtn.click();
 }
 
 
