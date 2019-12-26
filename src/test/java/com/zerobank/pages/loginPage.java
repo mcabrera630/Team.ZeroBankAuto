@@ -49,12 +49,5 @@ public void login(String emailStr, String passwordstr){
     email.sendKeys(emailStr);
     password.sendKeys(passwordstr);
     loginBtn.click();
-}
-
-
-
-
-
-
-
+    }
 }
