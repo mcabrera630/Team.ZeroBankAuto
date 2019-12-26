@@ -190,7 +190,7 @@ public class LoginTest extends TestBase {
         loginPage.password.sendKeys("superAdmin");
         loginPage.loginBtn.click();
 
-
+        Assert.assertEquals(driver.getCurrentUrl(),"http://34.220.250.213/web/login");
 
     }
     @Test
@@ -199,6 +199,7 @@ public class LoginTest extends TestBase {
         loginPage.email.sendKeys("cybertekabiAbu@info.com");
         loginPage.password.sendKeys("posmanager");
         loginPage.loginBtn.click();
+        Assert.assertEquals(driver.getCurrentUrl(),"http://34.220.250.213/web/login");
     }
     @Test
     public void emptyEmailAddress() throws InterruptedException{
@@ -206,6 +207,8 @@ public class LoginTest extends TestBase {
         loginPage.email.sendKeys("        ");
         loginPage.password.sendKeys("posmanager");
         loginPage.loginBtn.click();
+        Assert.assertEquals(driver.getCurrentUrl(),"http://34.220.250.213/web/login");
+
     }
 
 }

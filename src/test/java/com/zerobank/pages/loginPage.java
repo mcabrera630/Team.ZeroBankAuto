@@ -45,7 +45,9 @@ public class loginPage {
     public WebElement errorMessageLogin;
 
 
-
+public void login(String emailStr, String passwordstr){
+    email.sendKeys();
+}
 
 
 
