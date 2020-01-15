@@ -59,6 +59,9 @@ public class PageBase {
     public void navigateTo(String tab){
 
         Driver.get().findElement(By.xpath("//a[text()='"+tab+"']")).click();
+
+
+   //hjvvhvhbhbgvc
     }
 
 }
