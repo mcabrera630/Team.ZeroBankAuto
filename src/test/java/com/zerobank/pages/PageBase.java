@@ -61,7 +61,7 @@ public class PageBase {
         Driver.get().findElement(By.xpath("//a[text()='"+tab+"']")).click();
 
 
-   //hjvvhvhbhbgvc
+
     }
 
 }
